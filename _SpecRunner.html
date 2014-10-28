@@ -28,6 +28,12 @@
   
   <script src=".grunt/grunt-contrib-jasmine/jasmine-html.js"></script>
   
+  <script src=".grunt/grunt-contrib-jasmine/boot.js"></script>
+  
+  <script src="js/libs/jquery-min.js"></script>
+  
+  <script src="js/spec/helpers/jasmine-jquery.js"></script>
+  
   
 
   <script>
@@ -60,16 +66,18 @@
   </script>
 
   <script>
+    // Delay onLoad function until we are ready
+    var startTests = window.onload;
+    window.onload = null;
+
     function launchTest() {
     require([
       
     ],
     function(){
       require(['js/spec/DetailsView.spec.js','.grunt/grunt-contrib-jasmine/reporter.js'], function(){
-        require(['.grunt/grunt-contrib-jasmine/jasmine-helper.js'], function(){
-          // good to go! Our tests should already be running.
-        })
-      })
+        startTests();
+      });
     }
     )
   }

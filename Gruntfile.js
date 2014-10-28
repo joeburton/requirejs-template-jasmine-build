@@ -1,5 +1,10 @@
 module.exports = function(grunt) {
 
+    var helpers = [
+        'js/libs/jquery-min.js',
+        'js/spec/helpers/jasmine-jquery.js'
+    ];
+
     grunt.initConfig({
 
         pkg: grunt.file.readJSON('package.json'),
@@ -24,7 +29,9 @@ module.exports = function(grunt) {
 
         jasmine: {
             options: {
-                keepRunner: true
+                helpers: helpers,
+                keepRunner: true,
+                template: 'js/spec/helpers/custom.tmpl'
             },
             all: {
                 options: {
@@ -60,7 +67,6 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-require');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
 };

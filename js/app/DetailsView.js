@@ -7,7 +7,7 @@ define([
 
     var DetailsView = Backbone.View.extend({
 
-        el: $("#page"),
+        el: "#page",
 
         render: function() {
 

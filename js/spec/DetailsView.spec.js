@@ -9,10 +9,13 @@ define(function(require) {
         var detailsView;
         
         beforeEach(function() {
-            detailsView = new DetailsView();
+            setFixtures(sandbox());
+            $('#sandbox').append('<div id="page"> </div>');
         });
 
         it('should be an insatce of the Details View', function() {
+            detailsView = new DetailsView();
+            detailsView.render();
             expect(detailsView instanceof DetailsView).toBeTruthy();
         });
 
