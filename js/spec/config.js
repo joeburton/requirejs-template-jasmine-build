@@ -1,11 +1,20 @@
 ({
-    deps: ['jquery', 'underscore', 'backbone'
-    ],
-    callback: function ($, _, Backbone) {
-        Backbone.history = new Backbone.History();
+    'baseUrl': './js',
+    'paths': {
+        'jquery': 'libs/jquery-min',
+        'underscore': 'libs/underscore-min',
+        'backbone': 'libs/backbone-min',
+        'templates': '../templates',
+        'text': 'libs/text'
+    },
 
-        afterEach(function(){
-            Backbone.history.stop();
-        });
+    'shim': {
+        'underscore': {
+            'exports': '_'
+        },
+        'backbone': {
+            'deps': ['jquery', 'underscore'],
+            'exports': 'Backbone'
+        }
     }
 })

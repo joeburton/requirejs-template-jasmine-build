@@ -18,6 +18,12 @@ define(function(require) {
             detailsView.render();
             expect(detailsView instanceof DetailsView).toBeTruthy();
         });
+        
+        it('should be an insatce of the Details View', function() {
+            detailsView = new DetailsView();
+            detailsView.render();
+            expect(detailsView instanceof DetailsView).toBeTruthy();
+        });
 
     });
 
