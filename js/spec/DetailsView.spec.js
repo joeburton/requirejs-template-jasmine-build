@@ -24,6 +24,12 @@ define(function(require) {
             detailsView.render();
             expect(detailsView instanceof DetailsView).toBeTruthy();
         });
+        
+        it('something', function() {
+            detailsView = new DetailsView();
+            detailsView.render();
+            expect(detailsView instanceof DetailsView).toBeTruthy();
+        });
 
     });
 

@@ -6,6 +6,7 @@
     "grunt-cli": "0.1.9",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-template-jasmine-requirejs": "^0.2.0",
+    "grunt-contrib-jasmine": "0.6.4",
     "grunt-require": "~1.1.2"
   }
 }
