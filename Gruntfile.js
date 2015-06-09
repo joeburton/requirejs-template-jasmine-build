@@ -49,6 +49,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-require');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 };
